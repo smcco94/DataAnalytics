@@ -28,5 +28,6 @@ sns.barplot(data = dados, x = 'lingua', y = 'total')
 #criando visualização sem ser lingua inglesa
 not_ing = tmdb.query("original_language != 'en'")
 #Plotando com aspect, que altera largura da caixa, e height altura e alterando cor pallete
-sns.catplot(x = "original_language", kind="count", data = not_ing, aspect = 2, palette="magma",
+# utilizando no pallete _r, inverte a cor (se for do tipo gradiente), exemplo: pallete="blues_r"
+sns.catplot(x = "original_language", kind="count", data = not_ing, aspect = 2, palette="magma_r",
             order = not_ing.original_language.value_counts().index)
