@@ -13,7 +13,7 @@ notas_do_jumanji = notas.query("FilmeID==2")
 
 print("Nota média do Toy Story %.2f" % notas_do_toy_story.Nota.mean())
 print("Mediana do Toy Story %.2f" % notas_do_toy_story.Nota.median())
-print("Desvio padrão do Toy Story %.2f" % notas_do_toy_story.Nota.std())
+print("Desvio padrão do Toy Story %.2f \n" % notas_do_toy_story.Nota.std())
 
 
 print("Nota média do Jumanji %.2f" % notas_do_jumanji.Nota.mean())
