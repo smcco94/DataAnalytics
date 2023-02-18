@@ -36,7 +36,7 @@ ponderada = np.average(notas_por_filme, weights=votos_por_filme)
 geral = pd.merge(votos_por_filme,notas_por_filme, how='inner', on='FilmeID')
 
 # Criar coluna calculada para validar filmes com média acima da ponderada
-validacao = notas_por_filme / ponderada
+validacao = notas_por_filme / ponderada # type: ignore
 
 # Juntou a coluna calculada ao dataframe geral
 classificacao = pd.merge(geral,validacao, how='inner', on='FilmeID')
