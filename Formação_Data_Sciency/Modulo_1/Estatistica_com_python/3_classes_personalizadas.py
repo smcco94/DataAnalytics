@@ -28,7 +28,7 @@ classificacao = pd.cut(x = dados.Renda,
 freq = pd.value_counts(classificacao)
 perc = pd.value_counts(classificacao, normalize=True).round(4) * 100
 
-dist_quant = pd.DataFrame({'Frequência': freq, "Porcentagem (%)": perc}).sort_index(ascending=False)
+dist_quant = pd.DataFrame({'Frequência': freq, "Porcentagem (%)": perc}).sort_index(ascending=True)
 dist_quant.rename_axis('Classe',axis='columns',inplace=True)
 
 # Hisitograma neste caso ficaria ruim por causa da distribuição, com isso podemos aproximar com graficos de barra
