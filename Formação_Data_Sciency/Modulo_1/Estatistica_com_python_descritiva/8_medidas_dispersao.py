@@ -1,7 +1,7 @@
-import scipy as sp
-import pandas as pd
-import seaborn as sns
-import numpy as np
+import scipy as sp # type: ignore
+import pandas as pd # type: ignore
+import seaborn as sns # type: ignore
+import numpy as np # type: ignore
 
 dados = pd.read_csv('../files/dados.csv',sep=',')
 
@@ -23,7 +23,7 @@ df = pd.DataFrame(data = {'Fulano': [8, 10, 4, 8, 6, 10, 8],
 df.rename_axis('Matérias', axis = 'columns', inplace = True)
 # Calulando o desvio, sendo ele a diferença da nota em relação a média das notas
 notas_fulano = df[['Fulano']]
-nota_media_fulano = notas_fulano.mean()[0]
+nota_media_fulano = notas_fulano.mean()[0] # type: ignore
 notas_fulano['|Desvio|'] = (notas_fulano['Fulano'] - nota_media_fulano).abs()
 notas_fulano['(Desvio)^2'] = notas_fulano['|Desvio|'].pow(2)
 # Calculando o desvio médio absoluto
