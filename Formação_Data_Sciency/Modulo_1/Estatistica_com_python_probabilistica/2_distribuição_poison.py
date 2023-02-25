@@ -62,7 +62,7 @@ plot = sns.barplot(data = dados, x = 'QTD', y = 'Chance', color = 'gray', width 
 for i in plot.containers:
     plot.bar_label(i,)
 
-### 99,7% dos dados
+### Com 3 desvios padrões a partir da média
 plt.figure(figsize=(12,4))
 plot = sns.barplot(data = dados_filter, x = 'QTD', y = 'Chance', color = 'gray', width = 0.9)
 for i in plot.containers:
