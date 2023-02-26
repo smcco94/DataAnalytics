@@ -11,8 +11,8 @@ dados = pd.read_csv('../files/dados.csv', sep=',')
 # ao desvio padrão da variável original dividido pela raiz quadrada do tamanho da amostra. 
 # Este fato é assegurado para n maior ou igual a 30.
 
-tamanho_amostra = 2000
-total_de_amostras = 1500
+tamanho_amostra = 1000
+total_de_amostras = 200
 amostras = pd.DataFrame()
 for i in range(total_de_amostras):
   _ = dados.Idade.sample(tamanho_amostra)
@@ -27,7 +27,7 @@ amostras.mean().mean()
 
 # Comparando Desvio Padrão
 amostras.mean().std()
-dados.Idade.std() / np.sqrt(n) # type: ignore
+dados.Idade.std() / np.sqrt(tamanho_amostra) # type: ignore
 
 ########## Intervalo de Confiança
 
@@ -40,12 +40,16 @@ media_amostra = 5050
 significancia = 0.05
 confianca = 1 - significancia
 
-#Z Tabelado
+# Z Tabelado
 # 90% > z = 1,645
 # 95% > z = 1,96
 # 99% > z = 2,575
 
-z = 1,96
+# Z Calculado
+# Variavel = 95% confiabilidade --> (100 - (( 100 - 95 ) / 2)) / 100
+# Z = norm.ppf(variavel)
+
+z = norm.ppf(0.975) # Variável
 desv_pop = 150
 n = 20
 raiz_n = np.sqrt(n)
