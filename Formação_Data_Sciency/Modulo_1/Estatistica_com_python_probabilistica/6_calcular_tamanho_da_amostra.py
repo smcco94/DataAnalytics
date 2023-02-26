@@ -103,7 +103,10 @@ int((((z**2)*(s**2)*N) / ((z**2)*(s**2)+(e**2)*(N-1))).__round__())
     # quanto maior o tamanho da amostra, maior é a relevância estatística dela, ou seja, 
     # menor é a chance de os resultados serem apenas coincidência.
 
-
+#### Com desvio padrão conhecido
+    # n = ((z**2)*(sigma**2)*N) / ((z**2)*(sigma**2)+e**2(N-1))
+#### Com desvio padrão desconhecido
+    # n = ((z**2)*(s**2)*N) / ((z**2)*(s**2)+e**2(N-1))
 
 ##### Margem de Erro
 
@@ -151,4 +154,11 @@ print('Sua amostra aleatória foi de {}, apresentando uma margem de erro de {}.\
 
 
 
-################## DESAFIO INFINITO --> A população levada em consideração seria uma Amostra inicial
+################## DESAFIO INFINITO --> 
+
+# A população levada em consideração seria uma Amostra inicial
+
+#### Com desvio padrão conhecido
+    #n = (z*(sigma/e))**2
+#### Com desvio padrão desconhecido
+    #n = (z*(s/e))**2
