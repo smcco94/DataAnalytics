@@ -2,6 +2,8 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+#coment test
+
 tmdb = pd.read_csv('../files/tmdb_5000_movies.csv')
 #verificando linguas originais dos filmes
 tmdb.original_language.unique()
