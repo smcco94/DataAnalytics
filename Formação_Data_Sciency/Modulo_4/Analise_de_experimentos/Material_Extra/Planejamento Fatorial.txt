@@ -1,0 +1,11 @@
+DOE - Desing of experiment [Planejamento de experimentos]
+O que é o DOE ?
+
+Definição de variáveis independentes e variável dependente ***
+
+Planejamento Fatorial
+Aula 1 - https://www.youtube.com/watch?v=bXc42k2qvgo
+Aula 2 - https://www.youtube.com/watch?v=qOeZLtMNVFI
+Aula 3 - https://www.youtube.com/watch?v=3TVviFAEMqY
+
+Planejamento Experimento de Mistura - o que é ?
